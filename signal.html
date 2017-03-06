@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DATA 1988 - Signal</title>
+
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#2a2249">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#2a2249">
+
+
+    <style>
+
+        body {
+            font: 12px 'Noto Sans KR';
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .areaR {
+            fill: #8a89a6;
+        }
+
+        .areaT {
+            fill: #ff8c00;
+        }
+
+        #ryuGraph,
+        #taekGraph {
+            /*width: 40%; */
+            width: 100%;
+            height: 100%;
+            /*				height:50vh;*/
+            /*				height: 400px;*/
+            display: inline-block;
+        }
+
+        .percentRyu_A,
+        .percentTaek_A {
+            font-size: 22px;
+            font-family: 'Noto Sans KR';
+            fill: black;
+            font-weight: 200;
+            text-anchor: start;
+        }
+
+        .percentRyu_B,
+        .percentTaek_B {
+            font-size: 22px;
+            font-family: 'Noto Sans KR';
+            fill: black;
+            font-weight: 200;
+            text-anchor: start;
+        }
+
+        .percentRyu_C,
+        .percentTaek_C {
+            font-size: 22px;
+            font-family: 'Noto Sans KR';
+            fill: black;
+            font-weight: 200;
+            text-anchor: start;
+        }
+    </style>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <!-- 구글 한글 폰트 적용: 한나체 & notosans    -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/hanna.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/signal.css" type="text/css">
+    <!--    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css">-->
+    <!--    <link rel="stylesheet" href="assets/css/default.css">-->
+
+    <!--D3.js-->
+    <script type="text/javascript" src="assets/js/library/d3.v3.min.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/js/library/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="assets/js/library/bootstrap.min.js"></script>
+
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="assets/js/library/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/library/jquery.fittext.js"></script>
+    <script type="text/javascript" src="assets/js/library/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="assets/js/library/creative.js"></script>
+</head>
+
+
+<body id="page-top">
+
+<!--상단 nav   -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--			  좌측 상단 로고-->
+            <a class="navbar-brand page-scroll" href="main"><i class="fa fa-2x fa-cube"></i></a>
+            <!--				모바일 용 작은 버튼-->
+            <button type="button" href="main" class="navbar-toggle collapsed">
+                <a class="page-scroll" href="main"><i class="fa fa fa-times" id="navicon"></i></a>
+            </button>
+        </div>
+        <!--			우측 remove버튼			-->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="main"><i class="fa fa-2x fa-times"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-nav -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--상단 nav끝-->
+
+
+<!--행동시그널 제목부분-->
+<section class="title-network">
+    <div class="container">
+        <div class="section-title">
+            <div class="col-md-12 text-center">
+                <div class="place-title">
+
+                    <br><i class="fa fa-4x fa-location-arrow wow tada"></i>
+
+                    <h1 class="title">로맨스 : 행동 시그널</h1>
+                    <hr>
+
+                    <p class="title-sub-exp"><i class="fa fa-search"></i><strong>덕선, 정환, 택이의 행동 시그널 :</strong>
+                        상호작용(interaction) 기준으로 행동에 등급을 부여하고 등급에 따라 가중치를 주어 합산하였습니다. A는 상대가 알아차릴 정도의 적극적 행동, B는 상대가 알아챘는지
+                        불분명한 애매한 행동, C는 상호작용 없이 혼자 상대를 떠올리는 소극적 행동으로 분류하여 계산하였습니다.<br><i class="fa fa-hand-o-up"></i>검은색
+                        점에 마우스 오버하면 각 화마다의 특징적 행동 시그널을 살펴볼 수 있습니다.</p>
+
+                </div>
+
+                <div class="col-md-10 col-md-offset-1 text-center">
+                  <div class="d-flexbox">
+                    <div class="column white-cell">
+                      A는 적극적 행동
+                    </div>
+                    <div class="column white-cell">
+                      B는 애매한 행동
+                    </div>
+                    <div class="column white-cell">
+                      C는 소극적 행동
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--한눈에보기  -->
+<section class="graph-section">
+    <div class="container big-section">
+        <div class="row-eq-height">
+            <div class="content">
+                <div class="col-md-4 summary">
+                    <span class="thick-line"></span>
+                    <hgroup>
+                        <h1 class="drama-num">
+                            <h2 id="epiNum"></h2>
+                        </h1>
+                        <br/>
+                    </hgroup>
+                    <span class="light-line"></span>
+                </div>
+
+                <div class="col-md-8 article">
+                    <div class="graph">
+                        <svg id="summaryGraph"></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--행동양상변화            -->
+<section class="title-bh">
+    <div class="container">
+        <div class="section-bh">
+            <div class="col-md-12 text-center">
+                <div class="place-title">
+
+                    <br><i class="fa fa-2x fa-mars"></i>
+
+                    <h1 class="title">정환과 택의 덕선을 향한 행동 시그널</h1>
+
+                    <hr>
+
+                    <p class="title-sub-exp"><i class="fa fa-search"></i><strong>정환과 택이는 덕선에게 어떻게, 얼만큼 다가갔을까요? </strong>그들의
+                        덕선에 대한 행동 양상을 상대수치로 비교 분석해 보았습니다. 전체적으로 보았을 때 택이는 직접적인 행동으로 덕선이에게 마음을 표현하며, 정환이는 시간이 지날수록 덕선이를
+                        멀리서 바라봅니다.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="title-bh-g">
+    <div class="container">
+        <div class="bh-graph">
+            <div class="row">
+                <!--			정환부분-->
+                <div class="col-md-6 g1">
+
+                    <svg id="ryuGraph">
+
+                    </svg>
+                    <!--                    부연설명박스:정환-->
+                    <div class="bh-exp">
+                        <h1 class=bh-text>정환 : </h1>
+
+                        <p class="bh-text-p">정환이는 10화 택이가 덕선이를 좋아한다는 사실을 공개했을 때부터 갈수록 덕선이에게 잘 다가가지 못하고, 멀리서 지켜만 보거나 덕선을
+                            혼자 그립니다. 한편 5화에는 폭우가 쏟아지자 독서실 간 덕선이를 걱정하는 모습을 보입니다.</p>
+                    </div>
+                </div>
+
+                <!-- 				택이부분-->
+                <div class="col-md-6 g2">
+
+                    <svg id="taekGraph">
+
+                    </svg>
+                    <!--                    부연설명박스:택이-->
+                    <div class="bh-exp">
+                        <h1 class=bh-text>택이 :</h1>
+
+                        <p class="bh-text-p">택이는 15~17화 정환이 덕선을 좋아한다는 걸 발견했을 때를 제외하고 계속 덕선에게 실제로 다가갑니다. 11~12화에서는 덕선을
+                            멀리서 바라보는 씬도 비교적 자주 등장합니다.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--하단 페이지넘기기      -->
+<section class="footer-all">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="page-all" href="love"><span class="fa fa fa-chevron-left"></span>Pre</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script src="assets/js/GA_tracecode.js"></script>
+<script type="text/javascript" src="assets/js/signal.js"></script>
+</html>

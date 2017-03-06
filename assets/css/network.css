@@ -1,0 +1,736 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+    font-family: "GodoB";
+    src: url("../fonts/GodoB.otf"),
+    url("../fonts/GodoB.ttf"),
+    url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+    url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+html,
+body {
+    width: 100%;
+    /*height: 100%;*/
+}
+
+body {
+    font-family: "GodoB", "BMJUA", 'Noto Sans KR', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: rgba(34, 34, 48, 0.7);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: rgba(243, 129, 67, 0.9);
+}
+
+/*전체글씨적용*/
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "GodoB";
+    color: rgb(50, 50, 50);
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR' !important;
+    color: rgba(50, 50, 50, 0.7);
+    text-align: left;
+}
+
+.title {
+    color: #eee !important;
+    font-family: "GodoB" !important;
+    font-size: 30px;
+}
+
+.title-line {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: aliceblue;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 2px;
+}
+
+.title-sub-exp {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.3;
+    color: rgba(50, 50, 50, 0.7);
+    /*margin-left: 20px;*/
+    margin-left: 0.5%;
+}
+
+hr {
+    align-self: auto;
+    border: 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fa-diamond {
+    color: #eee;
+}
+
+.fa-info-circle,
+.fa-hand-o-up,
+.fa-search {
+    color: #F38143;
+    padding-right: 10px;
+}
+
+/*전체섹션 상하좌우 padding> 760px이상일 경우*/
+section {
+    padding: 100px 60px 10px 60px;
+
+}
+
+/*nav!!*/
+.navbar-default {
+    /*	border-color: rgba(255,255,255,0.1);*/
+    background-color: white;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    padding-left: 50px;
+    color: rgba(34, 34, 48, 0.7);
+    font-size: 14px;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #F38143;
+}
+
+.navbar-default .nav {
+    padding-right: 30px;
+}
+
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #F38143;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+    color: #F38143;
+}
+
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+    color: #F38143 !important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar-default {
+        border-color: rgba(34, 34, 48, 1);
+        background-color: rgba(34, 34, 48, 1);
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: rgba(243, 129, 67, 0.9);
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-default .nav > li > a:hover,
+    .navbar-default .nav > li > a:focus:hover {
+        color: rgba(243, 129, 67, 0.9);
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34, 34, 34, .05);
+        background-color: rgba(243, 129, 67, 0.9);
+    }
+
+    /*nav내려갈 때 애니메이션*/
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #30305e;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #30305e;
+    }
+
+    .navbar-default.affix .nav > li > a,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #30305e;
+
+    }
+
+    .navbar-default.affix .nav > li > a:hover,
+    .navbar-default.affix .nav > li > a:focus:hover {
+        color: #30305e;
+        /*        color: #222;		*/
+    }
+}
+
+/*nav끝!!!*/
+
+/*네트워크 타이틀 부분*/
+.title-network {
+    padding-bottom: 5px;
+    background-color: rgba(34, 34, 48, 0.98);
+}
+
+/*하단 그래프영역*/
+.graph-section {
+    padding: 10px 60px 30px 60px;
+    background-color: rgba(34, 34, 48, 0.98);
+}
+
+/* section css */
+
+.big-section .content {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    height: 500px;
+}
+
+.big-section .content .summary {
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(238, 238, 238, 0.9);
+    border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    border: 0px solid #000000;
+    vertical-align: top;
+}
+
+.big-section .content .summary .thick-line {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: rgba(49, 49, 63, 0.7);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.big-section .content .summary hgroup {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.big-section .content .summary .drama-num {
+    font-size: 32px;
+    color: #292958;
+}
+
+.big-section .content .summary .drama-title {
+    font-size: 30px;
+    color: #292958;
+}
+
+.big-section .content .summary .light-line {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(65, 65, 113, 0.5);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.big-section .content .summary {
+    overflow-y: hidden;
+}
+
+.big-section .content .summary:hover {
+    overflow-y: scroll;
+}
+
+.big-section .content .summary .drama-overall {
+    height: 40%;
+    margin-top: 5px;
+    padding: 8px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.big-section .content .summary .drama-overall:hover {
+    overflow-y: scroll;
+}
+
+p.drama-overall-text {
+    font-size: 13px;
+    color: #292958 !important;
+    font-family: 'Noto Sans KR' !important;
+}
+
+p.drama-overall-text:before {
+    content: "줄거리 : ";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.big-section .content .summary #line2 {
+    /*	position: static;*/
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(65, 65, 113, 0.5);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.big-section .content .summary .drama-rel {
+    /*	position: relative;*/
+    padding: 8px;
+    height: 30%;
+    padding: 8px;
+    margin-top: 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.big-section .content .summary .drama-rel:hover {
+    overflow-y: scroll;
+}
+
+p.drama-rel-text {
+    font-size: 13px;
+    color: #292958 !important;
+    font-family: 'Noto Sans KR' !important;
+}
+
+p.drama-rel-text:before {
+    content: "관계 : ";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.big-section .content .col-md-8{
+	height: 100%;
+	background-color: rgba(49, 49, 63, 0.7);
+	border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    border: 0px solid #000000;
+}
+
+
+.big-section .content .article {
+    height: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+.big-section .content .article .graph {
+    top: 0;
+    left: 0;
+    height: 85%;
+    width: 100%;
+
+}
+
+.big-section .content .article .footer {
+    position: relative;
+    height: 13%;
+    width: 100%;
+    top: 2%;
+    right: 0;
+    bottom: 0px;
+    background-color: rgba(34, 34, 48, 0.6);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    text-align: center;
+	padding-top:2px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+-----------------------------------------------
+stylesheet css부분
+------------------------------------------------
+*/
+
+/*force의 선 설정*/
+.edges {
+    /* stroke: #5C6E75;*/
+    stroke: #e3f0f7;
+    opacity: 0.4;
+}
+
+/*force의 text설정*/
+.nodes text {
+    fill: #eee;
+    /* fill: #131118;*/
+    /* border-style: inherit;*/
+    font-family: 'Hanna', fantasy;
+    font-size: 16px;
+    /*	text-decoration-color: aqua;*/
+    stroke: none;
+    /*	font-weight: bold;*/
+
+}
+
+/*force의 노드 테두리 설정*/
+.nodes {
+    stroke: #5C6E75;
+    /*	opacity: .9;*/
+    stroke-width: 3.5px;
+
+}
+
+/*하단 pagination*/
+ul.pagination {
+    /*	list-style-type: none;*/
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300;
+    width: 100%;
+    padding-left: 3.5%;
+    margin: 2.28% auto;
+    height: 26px;
+}
+
+ul.pagination li {
+    float: left;
+    /*	display: block;*/
+    /*	display: inline-block;*/
+    /*
+        height: 15px;
+        width: 15px;
+    */
+    /*	line-height: normal;*/
+    height: 1em;
+    width: 4.3%;
+    font-size: 12px;
+}
+
+ul.pagination li a {
+    line-height: 1.5em;
+    /*width: 2.8em;*/
+    width: 100%;
+    padding: 2px;
+    display: block;
+    text-decoration: none;
+    outline: none;
+    color: rgba(65, 65, 113, 0.8);
+    background: #bec2c4;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0px 2px 0px 0px #bec2c4;
+    -webkit-box-shadow: 0px 2px 0px 0px #bec2c4;
+    box-shadow: 0px 2px 0px 0px #bec2c4;
+    border-color: #bec2c4;
+    /*behavior: url(PIE.htc);*/
+}
+
+ul.pagination li a:hover,
+ul.pagination li a.current {
+    background: #F38143;
+    color: #e3f0f7;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0px 2px 0px 0px #F38143;
+    -webkit-box-shadow: 0px 2px 0px 0px #F38143;
+    box-shadow: 0px 2px 0px 0px #F38143;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-color: #F38143;
+}
+
+/*하단 페이지 넘기기*/
+.footer-all {
+    background-color: rgba(34, 34, 48, 1);
+    padding: 20px 60px;
+}
+
+.page-all {
+    color: rgba(227, 240, 247, 0.6);
+    font-family: "GodoB" !important;
+    font-size: 14px;
+}
+
+.fa-chevron-right {
+    padding: 0px 10px;
+}
+
+
+/*
+--------------------------------------------
+미디어쿼리:
+--------------------------------------------
+*/
+
+@media (min-width:992px) and (max-width:1200px){
+    .big-section .content {
+        height: 420px;
+    }
+    .big-section .content .summary{
+        height: 100%;
+    }
+    .big-section .content .col-md-8{
+        height: 100%;
+    }
+    .big-section. content .article{
+        height:100%;
+    }
+}
+
+
+@media(min-width:1200px){
+	.graph-section{
+		height: 610px;
+	}
+}
+
+
+@media(max-width:991px){
+	.graph-section{
+		height:850px;
+	}
+	
+	.big-section{
+		height: 100%;
+	}
+	
+	.big-section .content .summary{
+		height:380px;
+        /*height:360px;*/
+		border-radius: 10px 10px 0px 0px;
+   		 -moz-border-radius:10px 10px 0px 0px;
+    	-webkit-border-radius: 10px 10px 0px 0px;
+    	border: 0px solid #000000;
+	}
+    .row-eq-height {
+        height:100%;
+    }
+    .big-section .content {
+        height: 380px;
+    }
+	.big-section .content .col-md-8{
+		height: 440px;
+        /*width: 100%;*/
+		border-radius: 0px 0px 10px 10px;
+   		 -moz-border-radius: 0px 0px 10px 10px;
+    	-webkit-border-radius:  0px 0px 10px 10px;
+    	border: 0px solid #000000;
+	}
+	.big-section. content .article{
+		height:100%;
+		width: 100%;
+	}
+	.graph{
+		width:100%;
+		height: 85%;
+	}
+	svg{
+		width:100%;
+		height: 100%;
+	}
+	.big-section .content .footer{
+		/*height: */
+		width: 100%;
+	}
+	ul.pagination {
+        margin: 2% auto;
+    }
+
+}
+
+
+/*제일작을때*/
+@media (max-width: 786px){
+	section{
+		padding:100px 0 10px 0;
+	}
+	.graph-section{
+		height:815px;
+		padding:0;
+	}
+	
+	.big-section{
+		height: 100%;
+	}
+	
+	.big-section .content .summary{
+		height: 350px;
+		border-radius: 10px 10px 0px 0px;
+   		 -moz-border-radius:10px 10px 0px 0px;
+    	-webkit-border-radius: 10px 10px 0px 0px;
+    	border: 0px solid #000000;
+		text-align: center;
+		padding: 10px 20px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	.big-section .content .col-md-8{
+		/*height: 440px;*/
+        height: 57vw;
+		border-radius: 0px 0px 10px 10px;
+   		 -moz-border-radius: 0px 0px 10px 10px;
+    	-webkit-border-radius:  0px 0px 10px 10px;
+    	border: 0px solid #000000;
+	}
+	.big-section. content .article{
+		height:100%;
+		width: 100%;
+	}
+	.big-section .content .article .graph{
+		width:100%;
+		height: 45vw;
+	}
+	svg{
+		width:100%;
+		height: 100%;
+	}
+	.big-section .content .footer{
+		height: 13%;
+		width: 100%;
+		background-color: transparent;
+	}
+	ul.pagination {
+        margin: 2% auto;
+    }
+
+
+
+    ul.pagination li a{
+        height: 3vw;
+    }
+	
+
+	h1{
+		font-size: 25px;
+	}
+	
+	.title{
+		font-size: 25px !important;
+	}
+	p{
+		font-size: 10px;
+	}
+	li{
+		font-size:10px;
+	}
+	.fa-info-circle,
+	.fa-hand-o-up,
+	.fa-search {
+		color: #F38143;
+		padding-right: 3px;
+		font-size: 5px;
+	}
+	
+	
+	.big-section .content .summary .drama-num,
+	.big-section .content .summary .drama-title{
+    	font-size: 18px;
+	}
+		
+	p.drama-overall-text,
+	p.drama-rel-text{
+		font-size: 10px;
+	}
+	p.drama-overall-text:before,
+	p.drama-rel-text:before{
+		font-size: 11px;
+	}
+	.big-section .content .summary #line2,
+	.big-section .content .summary .light-line{
+		height: 1px;
+	}
+	.big-section .content .summary .thick-line {
+		height: 0;
+	}
+
+	
+}
+
+@media (max-width: 700px) {
+    .graph-section {
+        height: 770px;
+    }
+    ul.pagination li {
+        font-size: 1px;
+    }
+}
+
+@media (max-width: 600px) {
+    .graph-section {
+        height: 710px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .graph-section {
+        height: 660px;
+    }
+}
+
+@media (max-width: 450px) {
+    .graph-section {
+        height: 620px;
+    }
+}
+
+@media (max-width: 400px) {
+    .graph-section {
+        height: 600px;
+    }
+	
+	
+	.big-section .content .summary{
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
+

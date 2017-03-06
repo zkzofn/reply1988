@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        <meta name="description" content="">
+        <meta name="author" content="">
+    -->
+
+    <title>DATA 1988 - Love</title>
+
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#2a2249">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#2a2249">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <!-- 구글 한글 폰트 적용: 한나체 & notosans    -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/hanna.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/love.css" type="text/css">
+
+    <!--D3 library-->
+    <script type="text/javascript" src="assets/js/library/d3.v3.min.js"></script>
+
+    <!--tool-tip library-->
+    <script src="assets/js/library/d3.tip.v0.6.3.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/library/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/library/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="assets/js/library/jquery.easing.min.js"></script>
+    <script src="assets/js/library/jquery.fittext.js"></script>
+    <script src="assets/js/library/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/library/creative.js"></script>
+
+    <style>
+
+        body {
+            font: 12px Arial;
+        }
+
+        path {
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: grey;
+            stroke-width: 1;
+            shape-rendering: crispEdges;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 140px;
+            height: 40px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .d3-tip {
+            line-height: 1;
+            font-weight: bold;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            width: 100%;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.8);
+            content: "\25BC";
+            /*position: absolute;*/
+            position: relative;
+            text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+            margin: -1px 0 0 0;
+            top: 100%;
+            left: 0;
+        }
+
+        .line {
+            stroke-width: 5;
+        }
+
+    </style>
+
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="assets/js/library/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body id="page-top">
+
+<!--상단 nav   -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--			  좌측 상단 로고-->
+            <a class="navbar-brand page-scroll" href="main"><i class="fa fa-2x fa-cube"></i></a>
+            <!--				모바일 용 작은 버튼-->
+            <button type="button" href="main" class="navbar-toggle collapsed">
+                <a class="page-scroll" href="main"><i class="fa fa fa-times"></i></a>
+            </button>
+        </div>
+        <!--			우측 remove버튼			-->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="main"><i class="fa fa-2x fa-times"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-nav -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!--상단 nav끝-->
+
+
+<!--로맨스:케미 제목부분  -->
+<section class="title-chemi">
+    <div class="container">
+        <div class="section-title">
+            <div class="col-md-12 text-center">
+                <div class="chmi-title">
+                    <!--					 <span class="line"></span>-->
+                    <br><i class="fa fa-3x fa-heart wow tada"></i>
+
+                    <h1 class="titleT">로맨스: 케미</h1>
+                    <hr>
+                    <p class="title0"><i class="fa fa-search"></i><strong>케미</strong>는 남녀간의 풋풋하고 달달한감정. 같이 있어도 그립고 없으면
+                        서러운 그런 마음의 정도를 의미합니다.<br>덕선, 택, 정환 사이의 감정의 흐름도를 등장 씬 수, 대화 교류의 정도를 중심으로 다양하게 비교해보았습니다.</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <div class="chemi-epn">
+                    <img src="assets/img/element/c-02.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--1.씬수 그래프설명-->
+<section class="title-scene">
+    <div class="container">
+        <div class="scene-epn">
+            <div class="col-md-12 text-center">
+                <!--					 <span class="line"></span>-->
+                <hr class="subhr">
+                <i class="fa fa-2x fa-table"></i>
+
+                <h1 class="epn">등장 씬 수 비교 그래프</h1>
+
+                <p class="sub-title"><i class="fa fa-search"></i>덕선과 정환, 덕선과 택이가 함께 등장한 씬(Scene) 수를 화별로 비교해 보았습니다.</p>
+                <!--
+                                      <li>확실히 극 전반부는 어남류가, 후반부는 어남택이 우세했습니다.</li>
+                                      <li>그러나 단순히 같이 등장한 씬 수만 비교하는 것은 한계가 있습니다.</li>
+                -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--씬수그래프-->
+<section class="title-scene">
+    <div class="container">
+        <div class="love-xp">
+            <div class="love-xp-box">
+                <li>확실히 덕선이는 극 전반부에는 정환이와, 후반부에는 택이와 함께하는 씬이 많습니다.</li>
+                <li>그러나 단순히 같이 등장한 씬 수만 비교하는 것은 한계가 있습니다.</li>
+            </div>
+        </div>
+
+        <div class="scene-graph">
+            <div class="graph">
+                <svg id="graph1">
+
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--2.케미그래프 설명-->
+<section class="title-chemi-g">
+    <div class="container">
+        <div class="chemi-g-epn">
+            <div class="col-md-12 text-center">
+                <!--					 <span class="line"></span>-->
+
+                <hr class="subhr">
+                <i class="fa fa-2x fa-table"></i>
+
+                <h1 class="epn">케미 점수 그래프</h1>
+
+                <p class="sub-title-0"><i class="fa fa-search"></i>화별로 케미점수를 더해 덕선과 택, 덕선과 정환의 케미점수를 비교해 보았습니다.<br>얼마나
+                    많은 대화를 나누었는지는 대사수를 통해서, 대화의 중요도는 씬 별 등장인물 수에 따른 가중치를 통해서 구하고 그 둘을 곱해 케미점수를 계산했습니다.</p>
+
+                <div class="col-md-12 text-center">
+                    <div class="chemi-g-circle">
+                        <img src="assets/img/element/chemi-03.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--2.케미그래프-->
+<section class="title-chemi-g">
+    <div class="container">
+        <div class="love-xp">
+            <div class="love-xp-box">
+                <li>16화를 기점으로 택이와 덕선의 사이는 매우 가까워집니다.</li>
+                <li>18화에서 어남류는 장렬하게 전사하고 이후 19, 20화에서 어남택이 대미를 장식합니다.</li>
+            </div>
+        </div>
+
+        <div class="chemi-graph">
+            <div class="graph">
+                <svg id="graph2">
+
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--3.누적케미그래프 설명-->
+<section class="title-chemi-g">
+    <div class="container">
+        <div class="chemi-gn-epn">
+            <div class="col-md-12 text-center">
+                <!--					 <span class="line"></span>-->
+                <i class="fa fa-2x fa-table"></i>
+
+                <h1 class="epn">누적 케미 점수 그래프</h1>
+
+                <p class="sub-title"><i class="fa fa-search"></i>드라마가 진행 될 수록 누적되는 케미 점수 또한 비교해보았습니다. <br>위의 그래프에서도
+                    살펴보았듯이, 18화를 기점으로 덕선과 택이의 케미가 급격히 증가되는 것을 확인할 수 있습니다. </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--3.누적케미그래프-->
+<section class="title-chemi-g" id="chemi-nu">
+    <div class="container">
+
+        <div class="love-xp">
+            <div class="love-xp-box">
+                <li>위의 그래프에서도 살펴보았듯이, 18화를 기점으로 덕선과 택이의 케미가 급격히 증가되는 것을 확인할 수 있습니다.</li>
+            </div>
+        </div>
+
+
+        <div class="chemi-graph-n">
+            <div class="graph">
+                <svg id="graph3">
+
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--하단 페이지넘기기      -->
+<section class="footer-all">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-xs-6 pull-left">
+                <a class="page-all" href="place"><span class="fa fa fa-chevron-left"></span>Pre</a>
+            </div>
+            <div class="col-xs-6 pull-right">
+                <a class="page-all" href="signal">Next<span class="fa fa fa-chevron-right"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="assets/js/love_1.js"></script>
+<script type="text/javascript" src="assets/js/love_2.js"></script>
+<script type="text/javascript" src="assets/js/love_3.js"></script>
+
+</body>
+<script src="assets/js/GA_tracecode.js"></script>
+
+</html>

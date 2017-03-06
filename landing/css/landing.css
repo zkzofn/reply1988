@@ -1,0 +1,297 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+body{
+	font-family: 'Montserrat', 'Noto Sans KR',sans-serif;
+}
+
+h1 {
+  font-family:'Montserrat', sans-serif;
+  font-size: 60px;
+  line-height: 55px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+
+
+.lead {
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'Noto Sans KR';
+  opacity: 0.8;
+}
+
+
+/*------------------Utilities---------------------*/
+a {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #231f20;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+
+::selection {
+	background: #231f20; /* Safari */
+	color: #FFFFFF;
+}
+::-moz-selection {
+	background: #231f20; /* Firefox */
+	color: #FFFFFF;
+}
+
+
+/*------------------Buttons---------------------*/
+.btn:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+  outline: none;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 40px;
+  border: none;
+}
+
+.btn-lg {
+  font-size: 14px;
+/*  line-height: 1.33;*/
+  padding: 20px 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btn-primary {
+  background-color:#8181b5;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: #8be2e5;
+  color: #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+
+/* ==========================================================================
+   Nav Styles
+   ========================================================================== */
+
+.navbar {
+    border: 0px solid rgba(0, 0, 0, 0);
+    background: #70cbce;
+    margin: auto;
+    min-height: 60px;
+    padding-top: 15px;
+    position: fixed;
+    top: -60px;
+    transition: top 0.4s ease 0s;
+}
+
+.navbar.open {
+    top: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-nav a {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #4ec3cd;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+
+.logo img {
+	margin-top: 10px;
+}
+#logo{
+	margin-top: 40px;
+	opacity: 0.6;
+}
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+.title-line{
+    width: 100px;
+    border-color: white;
+	opacity: 0.7;
+    border-width: 4px;
+	border-radius: 2px;
+}
+
+header {
+  background: url(../img/page.jpg) no-repeat center center;
+  width: 100%;
+  padding: 20px 10px 60px 10px;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.header-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 0px;
+  margin-bottom: 16%;
+}
+
+ 
+@keyframes scrolling {
+0% {
+    opacity: 0;
+    top: 5px;
+}
+30% {
+    opacity: 1;
+    top: 10px;
+}
+100% {
+    opacity: 0;
+    top: 25px;
+}
+}
+
+
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+/* Landscape phones and down */
+@media (max-width: 768px) { 
+
+	.btn-lg {
+	  font-size: 12.5px;
+	  line-height: 1.33;
+	  padding: 16px 13px;
+	  letter-spacing: 0px;
+	}
+
+
+	.btn-wide {
+	  width: 100%;
+	  font-size: 12.5px;
+	  line-height: 1.33;
+	  padding: 16px 13px;
+	  letter-spacing: 0px;
+	}
+	
+	h1 {
+	  font-size: 40px;
+	  line-height: 30px;
+	  color: #ffffff;
+	  font-weight: 900;
+	  letter-spacing: 0px;
+	}
+
+
+
+	.lead {
+	  font-size: 16px;
+	  line-height:10px;
+	}
+	
+	.title-line{
+		max-width: 80px;
+		border-color: white;
+		opacity: 0.7;
+		border-width: 3px;
+		border-radius: 1px;
+	}
+
+	header {
+	  background: url(../img/page.jpg) no-repeat center center;
+	  width: 100%;
+	  padding: 0;
+	  height: 100vh;
+	  overflow: hidden;
+	  background-size: cover;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	}
+	
+	.header-info {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  left: 0;
+	  right: 0;
+	  margin-left: 0px;
+	  margin-bottom: 40%;
+	}
+}
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 786px) {
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+	
+  
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+     
+
+
+/* Large screens ----------- */
+@media (min-width: 1200px) and (max-width: 3000px) {
+
+}   
+
+
+
+
+

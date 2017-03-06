@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DATA 1988 - Network</title>
+
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#2a2249">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#2a2249">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <!-- 구글 한글 폰트 적용: 한나체 & notosans    -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/hanna.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/network.css" type="text/css">
+
+    <!--D3.js-->
+    <script type="text/javascript" src="assets/js/library/d3.v3.min.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/js/library/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="assets/js/library/bootstrap.min.js"></script>
+
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="assets/js/library/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/library/jquery.fittext.js"></script>
+    <script type="text/javascript" src="assets/js/library/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="assets/js/library/creative.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+<!--상단 nav   -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--			  좌측 상단 로고-->
+            <a class="navbar-brand page-scroll" href="main"><i class="fa fa-2x fa-cube"></i></a>
+            <!--				모바일 용 작은 버튼-->
+            <button type="button" href="main" class="navbar-toggle collapsed">
+                <a class="page-scroll" href="main"><i class="fa fa fa-times" id="navicon"></i></a>
+            </button>
+        </div>
+        <!--			우측 remove버튼			-->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="main"><i class="fa fa-2x fa-times"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-nav -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--상단 nav끝-->
+
+
+<!--네트워크 제목부분-->
+<section class="title-network">
+    <div class="container">
+        <div class="section-title">
+            <div class="col-md-12 text-center">
+                <div class="place-title">
+                    <br><i class="fa fa-3x fa-diamond wow tada"></i>
+
+                    <h1 class="title">등장인물 네트워크</h1>
+                    <hr>
+
+                    <p class="title-sub-exp"><i class="fa fa-search"></i>1화부터 20화까지의 드라마 전체구조를 등장인물 관계도 분석으로 살펴 보았습니다.
+                        원의 크기는 인물의 등장 횟수를 의미하며, 선의 굵기는 각 인물들간의 교류정도를 의미합니다.
+                        <br><i class="fa fa-hand-o-up"></i>아래의 번호를 클릭하시면 각 화별로 주요 내용과 인물들의 관계도를 확인할 수 있습니다.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="graph-section">
+    <div class="container big-section">
+        <div class="row-eq-height">
+            <div class="content">
+                <div class="col-md-4 summary">
+                    <!--                        <div class="summary">-->
+                    <span class="thick-line"></span>
+
+                    <hgroup>
+                        <h1 class="drama-num"><strong id="epiNum"></strong> <br/><span class="drama-title">드라마 제목은 이렇게 들어가요</span>
+                        </h1>
+                    </hgroup>
+
+                    <span class="light-line"></span>
+
+                    <div class="drama-overall">
+                        <p class="drama-overall-text"><i class="fa fa-commenting"></i></p>
+                    </div>
+
+                    <span id="line2"></span>
+
+
+                    <div class="drama-rel">
+                        <p class="drama-rel-text"><i class="fa fa-heart"></i>여기는 관계가 들어갈거에요.하하덕선-택: (관계연결도:상) 이들은 이 화에서
+                            서로의 감정을 확인하게 된다. 기억에 남는 대화장면? 택이 왈: 덕선아,.....</p>
+                    </div>
+
+                    <!--                        </div>-->
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="article">
+                        <div class="graph">
+                            <svg>
+                                <defs>
+
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--하단 페이지넘기기      -->
+<section class="footer-all">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="page-all" href="place">Next<span class="fa fa fa-chevron-right"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script src="assets/js/GA_tracecode.js"></script>
+<script type="text/javascript" src="assets/js/network.js"></script>
+</html>

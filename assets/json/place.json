@@ -1,0 +1,306 @@
+{
+  "nodes": [
+    {
+      "name": "정환네"
+    },
+    {
+      "name": "덕선네"
+    },
+    {
+      "name": "골목"
+    },
+    {
+      "name": "선우네"
+    },
+    {
+      "name": "택이네"
+    },
+    {
+      "name": "택이방"
+    },
+    {
+      "name": "정환방"
+    },
+    {
+      "name": "마당"
+    },
+    {
+      "name": "덕선"
+    },
+    {
+      "name": "선우"
+    },
+    {
+      "name": "정환"
+    },
+    {
+      "name": "보라"
+    },
+    {
+      "name": "동룡"
+    },
+    {
+      "name": "택이"
+    },
+    {
+      "name": "정봉"
+    }
+  ],
+  "links": [
+    {
+      "source": "덕선",
+      "target": "정환네",
+      "value": 90
+    },
+    {
+      "source": "선우",
+      "target": "정환네",
+      "value": 43
+    },
+    {
+      "source": "동룡",
+      "target": "정환네",
+      "value": 40
+    },
+    {
+      "source": "택이",
+      "target": "정환네",
+      "value": 22
+    },
+    {
+      "source": "정환",
+      "target": "정환네",
+      "value": 212
+    },
+    {
+      "source": "보라",
+      "target": "정환네",
+      "value": 25
+    },
+    {
+      "source": "정봉",
+      "target": "정환네",
+      "value": 150
+    },
+    {
+      "source": "덕선",
+      "target": "덕선네",
+      "value": 321
+    },
+    {
+      "source": "동룡",
+      "target": "덕선네",
+      "value": 10
+    },
+    {
+      "source": "선우",
+      "target": "덕선네",
+      "value": 31
+    },
+    {
+      "source": "택이",
+      "target": "덕선네",
+      "value": 18
+    },
+    {
+      "source": "정환",
+      "target": "덕선네",
+      "value": 5
+    },
+    {
+      "source": "보라",
+      "target": "덕선네",
+      "value": 207
+    },
+    {
+      "source": "덕선",
+      "target": "골목",
+      "value": 206
+    },
+    {
+      "source": "동룡",
+      "target": "골목",
+      "value": 50
+    },
+    {
+      "source": "보라",
+      "target": "골목",
+      "value": 156
+    },
+    {
+      "source": "선우",
+      "target": "골목",
+      "value": 171
+    },
+    {
+      "source": "정봉",
+      "target": "골목",
+      "value": 32
+    },
+    {
+      "source": "택이",
+      "target": "골목",
+      "value": 87
+    },
+    {
+      "source": "정환",
+      "target": "골목",
+      "value": 60
+    },
+    {
+      "source": "정환",
+      "target": "선우네",
+      "value": 3
+    },
+    {
+      "source": "정봉",
+      "target": "선우네",
+      "value": 2
+    },
+    {
+      "source": "선우",
+      "target": "선우네",
+      "value": 191
+    },
+    {
+      "source": "보라",
+      "target": "선우네",
+      "value": 12
+    },
+    {
+      "source": "덕선",
+      "target": "선우네",
+      "value": 5
+    },
+    {
+      "source": "택이",
+      "target": "선우네",
+      "value": 12
+    },
+    {
+      "source": "동룡",
+      "target": "택이네",
+      "value": 97
+    },
+    {
+      "source": "택이",
+      "target": "택이네",
+      "value": 95
+    },
+    {
+      "source": "덕선",
+      "target": "택이네",
+      "value": 103
+    },
+    {
+      "source": "선우",
+      "target": "택이네",
+      "value": 96
+    },
+    {
+      "source": "정환",
+      "target": "택이네",
+      "value": 83
+    },
+    {
+      "source": "정환",
+      "target": "택이방",
+      "value": 71
+    },
+    {
+      "source": "동룡",
+      "target": "택이방",
+      "value": 101
+    },
+    {
+      "source": "선우",
+      "target": "택이방",
+      "value": 74
+    },
+    {
+      "source": "덕선",
+      "target": "택이방",
+      "value": 122
+    },
+    {
+      "source": "택이",
+      "target": "택이방",
+      "value": 104
+    },
+    {
+      "source": "정봉",
+      "target": "택이방",
+      "value": 8
+    },
+    {
+      "source": "정환",
+      "target": "정환방",
+      "value": 91
+    },
+    {
+      "source": "선우",
+      "target": "정환방",
+      "value": 28
+    },
+    {
+      "source": "보라",
+      "target": "정환방",
+      "value": 17
+    },
+    {
+      "source": "택이",
+      "target": "정환방",
+      "value": 14
+    },
+    {
+      "source": "동룡",
+      "target": "정환방",
+      "value": 41
+    },
+    {
+      "source": "정봉",
+      "target": "정환방",
+      "value": 18
+    },
+    {
+      "source": "덕선",
+      "target": "정환방",
+      "value": 59
+    },
+    {
+      "source": "덕선",
+      "target": "마당",
+      "value": 64
+    },
+    {
+      "source": "택이",
+      "target": "마당",
+      "value": 5
+    },
+    {
+      "source": "정환",
+      "target": "마당",
+      "value": 51
+    },
+    {
+      "source": "보라",
+      "target": "마당",
+      "value": 10
+    },
+    {
+      "source": "선우",
+      "target": "마당",
+      "value": 21
+    },
+    {
+      "source": "정봉",
+      "target": "마당",
+      "value": 18
+    },
+    {
+      "source": "동룡",
+      "target": "마당",
+      "value": 13
+    }
+  ]
+}

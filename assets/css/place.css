@@ -1,0 +1,345 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+    font-family: "GodoB";
+    src: url("../fonts/GodoB.otf"),
+    url("../fonts/GodoB.ttf"),
+    url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+    url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    font-family: "GodoB", "BMJUA", 'Noto Sans KR', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: rgba(50, 50, 50, 0.8);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: #3B8AE0;
+}
+
+/*전체글씨적용*/
+h1,
+h2,
+h4,
+h5,
+h6 {
+    /*    font-family:"BMJUA" !important;*/
+    font-family: "GodoB" !important;
+    color: rgb(50, 50, 50);
+    font-size: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR' !important;
+    color: rgba(50, 50, 50, 0.8);
+    text-align: left;
+}
+
+.line {
+    display: inline-block;
+    width: 70px;
+    height: 3px;
+    background-color: rgba(50, 50, 50, 0.9);
+    opacity: 0.7;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 2px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Noto Sans KR' !important;
+    color: rgba(50, 50, 50, 0.7);
+    margin-left: 10px;
+}
+
+hr {
+    align-self: auto;
+    border: 0px;
+    border-top: 1px solid #bdcfd9;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.fa-info-circle,
+.fa-hand-o-up,
+.fa-search {
+    color: #3B8AE0;
+    padding-right: 10px;
+}
+
+/*전체섹션 상하좌우 padding> 760px이상일 경우*/
+section {
+    padding: 100px 60px;
+
+}
+
+/*nav!!*/
+.navbar-default {
+    background-color: white;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    padding-left: 50px;
+    color: rgba(50, 50, 50, 0.8);
+    font-size: 13px;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #3B8AE0;
+}
+
+.navbar-default .nav {
+    padding-right: 30px;
+}
+
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 0.7);
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+    color: rgba(50, 50, 50, 0.7);
+}
+
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+    color: rgba(50, 50, 50, 0.7) !important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar-default {
+        border: 1px solid rgba(189, 207, 217, 0.3);
+        background-color: rgba(189, 207, 217, 0.3);
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(50, 50, 50, 0.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #3B8AE0;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        color: rgba(50, 50, 50, 0.7);
+    }
+
+    .navbar-default .nav > li > a:hover,
+    .navbar-default .nav > li > a:focus:hover {
+        color: #3B8AE0;
+    }
+
+    /*
+        .navbar-default.affix {
+            border-color: rgba(34,34,34,.05);
+            background-color: rgba(255,255,255,1);
+        }
+    */
+    /*nav내려갈 때 애니메이션*/
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #2e2e6c;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #2e2e6c;
+    }
+
+    .navbar-default.affix .nav > li > a,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #2e2e6c;
+
+    }
+
+    .navbar-default.affix .nav > li > a:hover,
+    .navbar-default.affix .nav > li > a:focus:hover {
+        color: #2e2e6c;
+        /*        color: #222;		*/
+    }
+}
+
+/*nav끝!!!*/
+
+/*장소 제목부분*/
+.title-place {
+    padding-bottom: 20px;
+    background-color: #cadee5;
+
+}
+
+.place-xp {
+    background-color: rgba(255, 255, 255, 0.4);
+    /*	border:2px solid rgba(255,255,255,0.4);*/
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+}
+
+.place-xp-box {
+    background-color: #bdcfd9;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+/*그래프*/
+.title-place-g {
+    padding: 0px 60px 40px 60px;
+    background-color: #cadee5;
+}
+
+.scene-graph {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 50px;
+    height: 570px;
+    /*	height: 80%;*/
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.graph1 {
+    height: 560px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.nodetitle {
+    font-size: 12px !important;
+    opacity: 0.7;
+}
+
+/*하단 페이지 넘기기*/
+.footer-all {
+    background-color: #bdcfd9;
+    padding: 20px 60px;
+    /*
+        position: relative;
+        bottom: 0;
+    */
+}
+
+.page-all {
+    color: #2e2e6c;
+    font-size: 14px;
+    opacity: 0.7;
+
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    padding: 0px 10px;
+}
+
+/*
+
+---------------------------------
+미디어쿼리:mobile
+---------------------------------
+*/
+
+@media (max-width: 1200px) {
+    .scene-graph {
+        height: 500px;
+        padding: 10px;
+    }
+
+    .graph1 {
+        height: 500px;
+    }
+}
+
+@media (max-width: 991px) {
+    .scene-graph {
+        height: 380px;
+        padding: 10px;
+    }
+
+    .graph1 {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 100px 0 0 0;
+    }
+
+    .title-place-g {
+        padding: 0;
+    }
+
+    .scene-graph {
+        height: 45vw;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .fa-info-circle,
+    .fa-hand-o-up,
+    .fa-search {
+        color: #3B8AE0;
+        padding-right: 3px;
+        font-size: 5px;
+    }
+
+    .graph1 {
+        height: 60vw;
+    }
+}

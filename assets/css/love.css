@@ -1,0 +1,460 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+	font-family:"GodoB";
+	src:url("../fonts/GodoB.otf"),
+		url("../fonts/GodoB.ttf"),
+ 		url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+    	url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+	}
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /*	background-color:#D8B7B6;*/
+}
+
+body {
+    font-family: "GodoB", "BMJUA", 'Noto Sans KR', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: rgba(50, 50, 50, 0.7);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: #ea5050;
+}
+
+/*전체글씨적용*/
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "GodoB" !important;
+    color: rgb(50, 50, 50);
+    font-size: 30px;
+}
+
+.titleT {
+    font-size: 35px !important;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR' !important;
+    color: rgba(50, 50, 50, 0.8);
+}
+
+.graph {
+    height: 100%;
+}
+
+.line {
+    display: inline-block;
+    width: 95px;
+    height: 4px;
+    background-color: rgba(50, 50, 50, 0.9);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 2px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Noto Sans KR' !important;
+    color: rgba(50, 50, 50, 0.7);
+    margin-left: 10px;
+}
+
+hr {
+    align-self: auto;
+    border: 0px;
+    border-top: 1px solid #e0b8b8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.subhr {
+    align-self: auto;
+    border: 0;
+    border-bottom: 2px dashed #e0b8b8;
+}
+
+.fa-info-circle,
+.fa-hand-o-up,
+.fa-search {
+    color: #ea5050;
+    padding-right: 10px;
+}
+
+/*전체섹션 상하좌우 padding> 760px이상일 경우*/
+section {
+    padding: 100px 60px;
+}
+
+.title-chemi-g {
+    padding: 50px 60px;
+
+}
+
+/*nav!!*/
+.navbar-default {
+    background-color: white;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    padding-left: 50px;
+    color: rgba(50, 50, 50, 0.7);
+    font-size: 13px;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #ea5050;
+}
+
+.navbar-default .nav {
+    /*	margin-right: 30px;*/
+    padding-right: 30px;
+}
+
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 0.7);
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+    color: rgba(50, 50, 50, 0.7);
+}
+
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+    color: rgba(50, 50, 50, 0.7) !important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar-default {
+        border: 1px solid rgba(249, 218, 218, 1);
+        background-color: rgba(249, 218, 218, 1);
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(50, 50, 50, 0.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #ea5050;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        color: rgba(50, 50, 50, 0.7);
+    }
+
+    .navbar-default .nav > li > a:hover,
+    .navbar-default .nav > li > a:focus:hover {
+        color: #ea5050;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34, 34, 34, .05);
+        background-color: #fff;
+    }
+
+    /*nav내려갈 때 애니메이션*/
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #2e2e6c;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #2e2e6c;
+    }
+
+    .navbar-default.affix .nav > li > a,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #2e2e6c;
+
+    }
+
+    .navbar-default.affix .nav > li > a:hover,
+    .navbar-default.affix .nav > li > a:focus:hover {
+        color: #2e2e6c;
+        /*        color: #222;		*/
+    }
+}
+
+/*nav끝!!!*/
+
+/*로맨스:케미 제목부분*/
+.title-chemi {
+    /*	background-color:#e5caca;*/
+    background-color: rgba(249, 218, 218, 0.8);
+    padding-bottom: 30px;
+}
+
+/*1.씬수그래프*/
+.title-scene {
+    /*	background-color:#F9DADA;*/
+    background-color: rgba(249, 218, 218, 0.7);
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.love-xp {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.love-xp-box {
+    background-color: #F9DADA;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.scene-graph {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    height: 450px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+/*2.케미그래프*/
+
+.title-chemi-g {
+    background-color: rgba(249, 218, 218, 0.7);
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+
+.chemi-graph {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    padding: 20px;
+    height: 450px;
+}
+
+.chemi-g-circle {
+    padding-bottom: 30px;
+}
+
+/*3.누적케미그래프*/
+
+.chemi-graph-n {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    height: 450px;
+
+}
+
+#chemi-nu {
+    padding-bottom: 40px;
+}
+
+/*하단 페이지 넘기기*/
+.footer-all {
+    background-color: rgba(249, 218, 218, 1);
+    padding: 20px 60px;
+}
+
+.page-all {
+    color: rgba(50, 50, 50, 0.7);
+    font-family: "GodoB" !important;
+    font-size: 14px;
+    opacity: 0.8;
+
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    padding: 0px 10px;
+}
+
+/*표 legend텍스트*/
+.le-text {
+    /*	font-family: 'Noto Sans KR';*/
+    font-family: "GodoB" !important;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/*
+---------------------------------------------
+미디어쿼리:mobile&tablet
+----------------------------------------------
+*/
+
+/*어남류 어남택 사진 비율-모바일용*/
+@media (max-width: 768px) {
+
+
+}
+
+/*@media (min-device-width: 700px) and (max-device-width: 1200px) {*/
+@media (max-width: 1200px) {
+    body {
+        max-width: inherit;
+    }
+
+    section {
+        padding: 100px 0 0 0;
+    }
+
+    .title-chemi-g {
+        padding: 30px 0 0 0;
+    }
+
+    .scene-graph,
+    .chemi-graph,
+    .chemi-graph-n {
+        height: 370px;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+/*
+    p {
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .title0 {
+        font-size: 10px !important;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .titleT {
+        font-size: 30px !important;
+    }
+*/
+
+    .fa-info-circle,
+    .fa-hand-o-up,
+    .fa-search {
+        color: #ea5050;
+        padding-right: 3px;
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        max-width: inherit;
+    }
+
+    section {
+        padding: 100px 0 0 0;
+    }
+
+    .title-chemi-g {
+        padding: 30px 0 0 0;
+    }
+
+    .scene-graph,
+    .chemi-graph,
+    .chemi-graph-n {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 100px 0 0 0;
+    }
+
+    .title-chemi-g {
+        padding: 30px 0 0 0;
+    }
+
+    .scene-graph, .chemi-graph, .chemi-graph-n {
+        height: 37vw;
+    }
+	
+	    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .title0 {
+        font-size: 10px !important;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .titleT {
+        font-size: 30px !important;
+    }
+
+    .fa-info-circle,
+    .fa-hand-o-up,
+    .fa-search {
+        color: #ea5050;
+        padding-right: 3px;
+        font-size: 5px;
+    }
+}
