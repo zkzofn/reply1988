@@ -39,7 +39,7 @@ hr.light-small{
 	border-radius: 2px;
 }
 
-#hr-service{
+.hr-service{
 	border-color:rgb(41, 153, 134) !important;
 	border-width: 2px;
 }
